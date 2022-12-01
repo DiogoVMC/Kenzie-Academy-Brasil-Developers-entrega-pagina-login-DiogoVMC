@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/styles/globalStyles.css">
     <link rel="stylesheet" href="./src/styles/index.css">
+    <link rel="stylesheet" href="./src/styles/modal.css">
     <title>Login</title>
 </head>
 <body>
-    <script src="./src/scripts/modal.js"></script>
+    <div class="about">
+        <div class="info">
+            <img src="./src/assets/logo.png" class="logo">
+            <p class="bio">
+                A BRECO é uma marca de estilização focada em upcycling de peças através de uma curadoria de peças em brechós
+                com o intuito de trazer uma moda sustentável e ao mesmo tempo com o estilo urban.
+            </p>
+        </div>
+    </div>
+    <div class="login-side">
+    <img src="./src/assets/border.png" class="border">
+    <img src="./src/assets/border-dot.png" class="border-dot">
+        <div class="login">
+          <h3 class="login-title"> Login </h3>
+        <div class="login-info">
+           <label for="insert-email" class="label">Email:</label>
+            <input type="email" class="insert email">
+            <label for="insert-password" class="label">Senha:</label>
+            <input type="text" class="insert password">
+                <div class="forget-password">
+                    <button data-modal-control="recover" class="password-recover">Esqueci minha senha </button>
+                </div>
+        </div>
+            <button class="entrar">Entrar</button>
+        </div>
+    </div>
+    <div class="modal-wrapper" id="recover">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title"> Recuperar senha </h3>
+                <button class="modal-close" data-modal-control="recover" > X </button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-text">
+                    Digite seu email para que possamos encaminhar um código de
+                    recuperação:
+                </p>
+                <input type="email" class="modal-input">
+                <button type="submit" class="modal-button-send"> Enviar </button>
+            </div>
+    </div>
+    <script src="./src/scripts/modal.js"></script>    
 </body>
+
 </html>
